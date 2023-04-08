@@ -10,5 +10,8 @@
     <color name="lavender">#8692f7</color>
     <color name="grey">#808080</color>
     <color name="thiru">#2493E3</color>
+    <color name="yellow">#FFBF00</color>
+    <color name="brown">#150D00</color>
+    <color name="cream">#FFD38B</color>
 
 </resources>

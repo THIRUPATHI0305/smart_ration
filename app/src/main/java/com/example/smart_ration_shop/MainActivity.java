@@ -29,6 +29,7 @@ import java.util.Date;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+    static int count=0;
 
     DatabaseReference databaseReference;
 
@@ -115,7 +116,8 @@ public class MainActivity extends AppCompatActivity {
             buttonAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String id = "user" + new Date().getTime();
+                    count++;
+                    String id = String.valueOf(count);
                     String name = textName.getText().toString();
                     String email = textEmail.getText().toString();
                     String country = textCountry.getText().toString();

@@ -25,7 +25,7 @@ public class home extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         ActionBar actionBar = getSupportActionBar();
         name=getIntent().getStringExtra("name");
-        Toast.makeText(this, ""+name, Toast.LENGTH_SHORT).show();
+
         if (actionBar != null) {
             actionBar.hide();
         }
