@@ -50,7 +50,7 @@
 
     <EditText
         android:id="@+id/signup_username"
-        android:layout_width="338dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_edittext"

@@ -10,7 +10,7 @@
         android:layout_marginEnd="10sp"
         android:layout_marginTop="5sp"
         android:id="@+id/titleLayout"
-        android:hint="Enter Product Name and date">
+        android:hint="Enter Product Name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
