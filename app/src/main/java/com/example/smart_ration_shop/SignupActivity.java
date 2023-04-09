@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,12 +17,16 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+
 public class SignupActivity extends AppCompatActivity{
     EditText signupName, signupUsername, signupEmail, signupPassword,date,phone;
     TextView loginRedirectText;
     Button signupButton;
     FirebaseDatabase database;
+    DatePickerDialog.OnDateSetListener setListener;
     DatabaseReference reference;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +43,17 @@ public class SignupActivity extends AppCompatActivity{
         signupUsername = findViewById(R.id.signup_username);
         signupPassword = findViewById(R.id.signup_password);
         date = findViewById(R.id.date);
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DATE);
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         phone = findViewById(R.id.phone);
         loginRedirectText = findViewById(R.id.loginRedirectText);
         signupButton = findViewById(R.id.signup_button);
