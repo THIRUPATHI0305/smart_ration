@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,10 +21,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Calendar;
 
 public class SignupActivity extends AppCompatActivity{
-    EditText signupName, signupUsername, signupEmail, signupPassword,date,phone;
-    TextView loginRedirectText;
+    EditText signupName, signupUsername, signupEmail, signupPassword,phone;
+    TextView loginRedirectText,date;
     Button signupButton;
     FirebaseDatabase database;
+    private DatePickerDialog picker;
     DatePickerDialog.OnDateSetListener setListener;
     DatabaseReference reference;
 
@@ -43,14 +45,20 @@ public class SignupActivity extends AppCompatActivity{
         signupUsername = findViewById(R.id.signup_username);
         signupPassword = findViewById(R.id.signup_password);
         date = findViewById(R.id.date);
-        Calendar calendar = Calendar.getInstance();
-        final int year = calendar.get(Calendar.YEAR);
-        final int month = calendar.get(Calendar.MONTH);
-        final int day = calendar.get(Calendar.DATE);
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                final Calendar calendar = Calendar.getInstance();
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+                int month = calendar.get(Calendar.MONTH);
+                int year = calendar.get(Calendar.YEAR);
+                picker = new DatePickerDialog(SignupActivity.this,R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                        date.setText(day + "/" + (month +1) + "/" + year);
+                    }
+                },year,month,day);
+                picker.show();
             }
         });
 
