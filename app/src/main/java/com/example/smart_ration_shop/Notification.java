@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,8 +16,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 public class Notification extends AppCompatActivity {
+
+    private CheckBox c1,c2,c3,c4,c5,c6;
     private EditText number,msg;
-    private Button btn;
+    private Button btn,b1;
 
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
 
@@ -25,8 +28,44 @@ public class Notification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
-        number = findViewById(R.id.editTextNumber);
         msg = findViewById(R.id.msgName);
+        c1 = findViewById(R.id.checkBox);
+        c2 = findViewById(R.id.checkBox2);
+        c3 = findViewById(R.id.checkBox3);
+        c4 = findViewById(R.id.checkBox4);
+        c5 = findViewById(R.id.checkBox5);
+        c6 = findViewById(R.id.checkBox6);
+        b1 = findViewById(R.id.b);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                StringBuilder result = new StringBuilder();
+                result.append("Your Selected Item : ");
+                if(c1.isChecked()){
+                    result.append("அரிசி,");
+                }
+                if(c2.isChecked()){
+                    result.append("கோதுமை,");
+                }
+                if(c3.isChecked()){
+                    result.append("சினி,");
+                }
+                if(c4.isChecked()){
+                    result.append("எண்ணெய்,");
+                }
+                if(c5.isChecked()){
+                    result.append("தேநீர் தூள்,");
+                }
+                if(c6.isChecked()){
+                    result.append("துவாரம் பருப்பு,");
+                }
+                msg.setText(result.toString());
+
+            }
+        });
+        number = findViewById(R.id.editTextNumber);
+
         btn = findViewById(R.id.button123);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
