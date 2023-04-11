@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/user_item_bg"
+    android:background="@color/white"
     android:padding="4sp"
     android:layout_margin="4sp"
     android:orientation="vertical"
@@ -11,7 +11,7 @@
         android:id="@+id/textName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textStyle="bold"
         android:textSize="18sp"
         android:text="User Id"/>
@@ -20,7 +20,7 @@
         android:id="@+id/textEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textStyle="italic"
         android:textSize="18sp"
         android:text="User Name"/>
@@ -29,7 +29,7 @@
         android:id="@+id/textCountry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textStyle="italic"
         android:textSize="18sp"
         android:text="User PhoneNumber"/>
@@ -57,7 +57,7 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:layout_margin="3dp"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@color/material_dynamic_neutral_variant40"
             android:text="UPDATE"
             android:textColor="@android:color/white"/>
 

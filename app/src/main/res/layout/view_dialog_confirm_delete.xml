@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="50sp"
             android:layout_marginTop="5dp"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@color/material_dynamic_neutral_variant40"
             android:text="No, Exit"
             android:textColor="@android:color/white"
             android:textSize="20dp"
