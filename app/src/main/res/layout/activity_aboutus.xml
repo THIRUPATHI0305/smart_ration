@@ -4,113 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rose"
+    tools:context=".about_us">
 
-    tools:context=".about_us"
-    tools:ignore="ExtraText">
-
+    <ImageView
+        android:id="@+id/imageRule"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow"
+        app:tint="@color/black" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="404dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="25dp"
 
-        android:gravity="center"
-        android:text="SMART RATION SHOP MANAGEMENT ABOUT US"
-        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Rules"
+        app:layout_constraintBottom_toBottomOf="@+id/imageRule"
+        app:layout_constraintStart_toEndOf="@+id/imageRule"
+        app:layout_constraintTop_toTopOf="@+id/imageRule" />
 
-        android:textSize="20dp"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toBottomOf="@+id/imageRule" />
 
-    <TextView
-        android:layout_width="269dp"
-        android:layout_height="35dp"
-        android:text="Increase frequency of distribution:"
-        android:textColor="@color/white"
-        android:textSize="17dp"
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/spring_dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:dampingRatio="0.5"
+        app:dotsColor="@color/peach"
+        app:dotsSize="16dp"
+        app:dotsSpacing="6dp"
+        app:dotsStrokeColor="@color/peach"
+        app:dotsStrokeWidth="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="391dp"
-        android:layout_height="144dp"
-        android:text="             Another way to reduce crowds is to increase the frequency of distribution. Instead of distributing rations once a month, the distribution can be done twice a month or weekly, depending on the availability of supplies. This will reduce the number of people who come to the ration shops on any given day."
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="202dp"
-        android:layout_height="43dp"
-        android:text="Mobile distribution units:"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="386dp"
-        android:layout_height="180dp"
-        android:text="             To reach out to customers who are not able to come to the ration shop, mobile distribution units can be established to deliver rations to their doorstep. This can reduce the number of people who come to the shop and help to reach out to those who are not able to access the ration shops easily."
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="281dp"
-        android:layout_height="49dp"
-        android:text="Improved customer service:"
-        android:textColor="@color/white"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="389dp"
-        android:layout_height="175dp"
-        android:text="             To manage crowds effectively, it is important to have a well-organized and efficient system in place. This can be achieved by providing good customer service and ensuring that staff at the ration shops are trained to handle crowds effectively. This can include measures such as providing clear information to customers, organizing queues, and ensuring that rations are distributed in a timely manner.  "
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909" />
+        app:layout_constraintTop_toBottomOf="@+id/viewpager"
+        app:stiffness="300"
+        tools:ignore="MissingClass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

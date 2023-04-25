@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">smart_ration_shop</string>
+    <string name="rules1_description">
+        முதல் படியாக பயனர் தரவைச் சேர்க்க உம்.
+    </string>
+    <string name="rules2_description">
+        மொபைல் எண் சேர்க்கப்பட வேண்டும், தயாரிப்பு பெட்டியை அங்கு கிளிக் செய்யவும்.
+    </string>
+    <string name="rules3_description">
+        உங்கள் மொபைலில் எஸ்எம்எஸ் அனுப்பப்பட்டது.
+    </string>
+    <string name="rules4_description">
+        இருப்பு சரிபார்த்தல்.
+    </string>
 </resources>

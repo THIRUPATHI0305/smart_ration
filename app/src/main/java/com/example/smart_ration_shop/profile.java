@@ -57,6 +57,7 @@ public class profile extends AppCompatActivity {
 
         Intent intent = getIntent();
         String emailUser = intent.getStringExtra("name");
+        Toast.makeText(this, "hii" + emailUser, Toast.LENGTH_SHORT).show();
         profileUsername.setText(emailUser);
         reference = FirebaseDatabase.getInstance().getReference("users").child(emailUser);
         reference.addValueEventListener(new ValueEventListener() {
@@ -64,16 +65,16 @@ public class profile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
 
-                    String name = snapshot.child("name").getValue().toString();
-                    String email = snapshot.child("email").getValue().toString();
-                    String date = snapshot.child("date").getValue().toString();
-                    String phone = snapshot.child("phone").getValue().toString();
-                    profileName.setText(name);
-                    profileEmail.setText(email);
-                    profileDate.setText(date);
-                    profilePhone.setText(phone);
-                    titleName.setText(name);
-                    titleUsername.setText(emailUser);
+                String name = snapshot.child("name").getValue().toString();
+                String email = snapshot.child("email").getValue().toString();
+                String date = snapshot.child("date").getValue().toString();
+                String phone = snapshot.child("phone").getValue().toString();
+                profileName.setText(name);
+                profileEmail.setText(email);
+                profileDate.setText(date);
+                profilePhone.setText(phone);
+                titleName.setText(name);
+                titleUsername.setText(emailUser);
 
 
 

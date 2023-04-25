@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/peach"
     tools:context=".home">
 
 <!--    <include layout="@layout/toolbar"-->
@@ -25,21 +25,38 @@
             android:layout_weight="2">
 
             <TextView
-                android:layout_width="343dp"
-                android:layout_height="68dp"
-                android:layout_alignParentStart="true"
+                android:id="@+id/textView2"
+                android:layout_width="209dp"
+                android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="42dp"
-
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="25dp"
-
-
-                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:textSize="17dp"
+                android:layout_marginEnd="178dp"
+                android:layout_marginBottom="54dp"
                 android:text="SMART RATION SHOP"
-                android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvUsernameHome"
+                android:layout_width="191dp"
+                android:layout_height="29dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="67dp"
+                android:layout_marginEnd="191dp"
+                android:layout_marginBottom="6dp"
+
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
         </RelativeLayout>
@@ -47,11 +64,11 @@
         <GridLayout
             android:id="@+id/mainGrid"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="219dp"
             android:layout_weight="8"
             android:alignmentMode="alignMargins"
+            android:background="@drawable/home_bg"
             android:columnCount="2"
-
             android:columnOrderPreserved="false"
             android:padding="14dp"
             android:rowCount="3">
@@ -62,7 +79,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-
+                android:layout_marginTop="40dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginLeft="16dp"
@@ -112,6 +129,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@color/black"

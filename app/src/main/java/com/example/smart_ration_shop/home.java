@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -17,6 +18,7 @@ public class home extends AppCompatActivity {
     ImageView add,notify,profile,update,delete,logout;
     String name,email,username,password,udate,uphone;
     Toolbar toolbar;
+    TextView tv;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,8 @@ public class home extends AppCompatActivity {
             actionBar.hide();
         }
         setContentView(R.layout.activity_home);
-
+        tv = findViewById(R.id.tvUsernameHome);
+        tv.setText("Hello , "+name);
         add = findViewById(R.id.add);
         profile = findViewById(R.id.profile);
         logout = findViewById(R.id.logout1);
