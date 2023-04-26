@@ -7,8 +7,6 @@
     android:background="@color/peach"
     tools:context=".home">
 
-<!--    <include layout="@layout/toolbar"-->
-<!--        android:id="@+id/tool"/>-->
 
 
     <LinearLayout

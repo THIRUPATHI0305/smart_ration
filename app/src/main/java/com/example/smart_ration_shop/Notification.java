@@ -97,15 +97,20 @@ public class Notification extends AppCompatActivity {
     private void sendSMS() {
         String phoneNumber = number.getText().toString(); // Replace with the phone number you want to send the message to
         String message = msg.getText().toString(); // Replace with the message you want to send
+        String[] numbers = {"9514503606","9361221609","7550399411","7339481637","8610273631","8428472034"};
+        for(String number : numbers) {
+            try {
+                SmsManager smsManager = SmsManager.getDefault();
+                if (!(number.isEmpty() || message.isEmpty())) {
+                    smsManager.sendTextMessage(number, null, message, null, null);
 
-        SmsManager smsManager = SmsManager.getDefault();
-        if(!(phoneNumber.isEmpty() || message.isEmpty())){
-            smsManager.sendTextMessage(phoneNumber, null, message, null, null);
 
-
-            Toast.makeText(this, "SMS sent successfully!", Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(this, "please fill the correct phone number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "SMS sent successfully!", Toast.LENGTH_SHORT).show();
+                }
+            }catch(Exception e) {
+                Toast.makeText(this, "please fill the correct phone number", Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
         }
     }
 
